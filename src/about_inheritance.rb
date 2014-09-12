@@ -40,6 +40,10 @@ class AboutInheritance < Neo::Koan
     chico = Chihuahua.new("Chico")
     assert_equal __(:happy), chico.wag
 
+    # assert_raise is a bit reversed from what you would expect: the
+    # thing that you put in the blank should be the class name of the
+    # error that the code in the do block executes. That is: look at
+    # the *second* part of your error to find the answer.
     assert_raise(___(NoMethodError)) do
       fido = Dog.new("Fido")
       fido.wag
@@ -71,6 +75,8 @@ class AboutInheritance < Neo::Koan
 
   class GreatDane < Dog
     def growl
+      # What is super? Remember that super above called a method, and
+      # did not refer to the name of the class.
       super.bark + ", GROWL"
     end
   end
