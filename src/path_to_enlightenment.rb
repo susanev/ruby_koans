@@ -17,8 +17,8 @@ require 'about_strings'
 #in_ruby_version("2") do
 #  require 'about_keyword_arguments'
 #end
-#require 'about_constants'
-#require 'about_control_statements'
+require 'about_constants'
+require 'about_control_statements'
 #require 'about_triangle_project'
 #require 'about_exceptions'
 #require 'more_about_methods'
