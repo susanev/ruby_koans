@@ -19,6 +19,7 @@ require 'about_symbols'
 require 'about_nil'
 require 'about_beginning_the_search'
 require 'about_regular_expressions'
+require 'about_guessing_game'
 #in_ruby_version("2") do
 #  require 'about_keyword_arguments'
 #end
