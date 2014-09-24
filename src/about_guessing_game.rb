@@ -19,8 +19,8 @@ DEBUG = false
 # - #guesses: Returns the number of guesses that have been made.  
 #
 # You'll implement the NumberGuesser. The NumberGuesser tries to guess
-# an number between 0 and max_number in as few guesses as possible,
-# based on the result of the guess (:high, :low, :correct).
+# a number between 0 and max_number in as few guesses as possible,
+# based on the result of the previous guesses (:high, :low, :correct).
 # 
 # Implement NumberGuesser#make_guess so that it guesses a number,
 # given the following constraints:
@@ -29,7 +29,6 @@ DEBUG = false
 # * Get the number in as few guesses as possible
 # * Use the feedback to refine your guess
 #
-# HINT: Use the same guessing strategy that you would in real life!
 class NumberGuesser
   attr_reader :guesses
 
@@ -40,7 +39,7 @@ class NumberGuesser
   end
 
   def make_guess
-    # Use the strategy you'd use in real life to make a guess
+    # HINT: Use the same guessing strategy that you would in real life!
     #
     # YOUR CODE HERE
 
@@ -102,7 +101,7 @@ class AboutGuessingGame < Neo::Koan
 
   def test_guesser_is_optimal
     max = 100
-    # Why this bound? (#ceil rounds the number up)
+    # Why this bound? (#ceil rounds the number up, BTW)
     bound = Math.log2(max).ceil
     thinker = NumberThinker.new(max)
     guesser = NumberGuesser.new(max)
