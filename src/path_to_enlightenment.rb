@@ -26,6 +26,7 @@ require 'about_modules'
 #  require 'about_keyword_arguments'
 #end
 require 'about_triangle_project'
+require 'about_hash_backed_dictionary'
 #require 'about_exceptions'
 #require 'more_about_methods'
 #require 'about_triangle_project_2'
