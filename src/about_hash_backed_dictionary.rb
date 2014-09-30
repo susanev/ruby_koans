@@ -2,6 +2,16 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 require './words'
 
+# For this project, you're going to write a simple dictionary, along
+# the lines of what you'd use for word validation in your Scrabble
+# projec. You're given an object that emits one word at a time, and
+# you need to turn that stream of words into a hash backed
+# dictionary. You'll fill in the blanks in the HashDictionary class to
+# make the tests pass below.
+#
+# The Words class has already been written and is what you're given as
+# the word_emitter object. See the tests below for details on how the
+# word_emitter is instantiated and passed to the HashDictionary.
 class HashDictionary
   # word_emitter has two methods defined on it: #next_word and
   # #remaining_words. When there are no words left, #next_word will
@@ -14,20 +24,12 @@ class HashDictionary
 
   def load_words
     # WRITE THIS CODE
-    #--
-    while word = @word_emitter.next_word do
-      @backing_store[word] = true
-    end
-    #++
   end
 
   # This method should take a word and return true if it's in the
   # dictionary and false if it's not.
   def valid_word?(word)
     # WRITE THIS CODE
-    #--
-    @backing_store[word]
-    #++
   end
 
   def size
@@ -51,11 +53,11 @@ class AboutHashBackedDictionary < Neo::Koan
     w = Words.new
     dictionary = HashDictionary.new(w)
 
-    assert __(true), dictionary.valid_word?("cat")
-    assert __(true), dictionary.valid_word?("bat")
-    assert __(true), dictionary.valid_word?("dictionary")
-    assert __(false), dictionary.valid_word?("asasdfasdfasdf")
-    assert __(false), dictionary.valid_word?("78943278943")
+    assert __, dictionary.valid_word?("cat")
+    assert __, dictionary.valid_word?("bat")
+    assert __, dictionary.valid_word?("dictionary")
+    assert __, dictionary.valid_word?("asasdfasdfasdf")
+    assert __, dictionary.valid_word?("78943278943")
   end
 
   
