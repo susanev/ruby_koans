@@ -53,11 +53,11 @@ class AboutHashBackedDictionary < Neo::Koan
     w = Words.new
     dictionary = HashDictionary.new(w)
 
-    assert __, dictionary.valid_word?("cat")
-    assert __, dictionary.valid_word?("bat")
-    assert __, dictionary.valid_word?("dictionary")
-    assert __, dictionary.valid_word?("asasdfasdfasdf")
-    assert __, dictionary.valid_word?("78943278943")
+    assert_equal __, dictionary.valid_word?("cat")
+    assert_equal __, dictionary.valid_word?("bat")
+    assert_equal __, dictionary.valid_word?("dictionary")
+    assert_equal __, dictionary.valid_word?("asasdfasdfasdf")
+    assert_equal __, dictionary.valid_word?("78943278943")
   end
 
   
