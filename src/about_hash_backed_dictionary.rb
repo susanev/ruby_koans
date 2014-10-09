@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/neo')
 
-require './words'
+require File.expand_path(File.dirname(__FILE__) + '/words')
 
 # For this project, you're going to write a simple dictionary, along
 # the lines of what you'd use for word validation in your Scrabble

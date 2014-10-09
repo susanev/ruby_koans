@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/neo')
 
-require './number_thinker'
+require  File.expand_path(File.dirname(__FILE__) + '/number_thinker')
 
 # Set this to true if you need some debugging feedback
 DEBUG = false
