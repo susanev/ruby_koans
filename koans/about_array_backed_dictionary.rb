@@ -44,7 +44,7 @@ class ArrayDictionary
       else
         min = 0
         max = @backing_store.length
-        mid = (max+min)/2+min
+        mid = (max+min)/2
         while max - min > 1
           if new_word.downcase > @backing_store[mid].downcase
             min = mid
